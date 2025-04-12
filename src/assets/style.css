@@ -1,0 +1,312 @@
+/* Global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+nav {
+    position: sticky;
+    /* Corrected this line */
+    top: 0;
+    /* Ensures the nav sticks to the top */
+    background-color: #004080;
+    ;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+    /* Optional: ensures it stays above other content */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Form container */
+form {
+    background-color: white;
+    padding: 30px;
+    max-width: 450px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    margin-bottom: 20px;
+    color: #004080;
+    text-align: center;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #004080;
+    outline: none;
+}
+
+form button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0066cc;
+}
+
+/* Message paragraph */
+.error {
+    color: #cc0000;
+}
+
+.dashboard {
+    padding: 30px;
+    text-align: center;
+}
+
+.dashboard h2 {
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: #0066cc;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #0066cc;
+}
+
+.logout-btn {
+    margin-top: 30px;
+    background-color: #cc0000;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #e60000;
+}
+
+.inventory-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* Prevent full height stretching */
+    gap: 40px;
+    padding: 0px 40px;
+    flex-wrap: wrap;
+}
+
+.headinf {
+    color: #004080;
+    text-align: center;
+}
+
+
+.tool-form {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+}
+
+.tool-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #004080;
+}
+
+.tool-form input,
+.tool-form select,
+.tool-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.tool-form button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.tool-form button:hover {
+    background-color: #0066cc;
+}
+
+.tool-list {
+    flex: 2;
+    min-width: 300px;
+    max-width: 100%;
+    overflow-x: auto;
+    /* Allow horizontal scroll if table overflows */
+    box-sizing: border-box;
+}
+
+
+.tool-card {
+    background: #f2f2f2;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tool-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.tool-card h4 {
+    color: #004080;
+    margin: 10px 0 5px;
+}
+
+.tool-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tool-table th,
+.tool-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+
+.tool-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tool-table img {
+    border-radius: 4px;
+}
+
+.tool-table button {
+    padding: 6px 10px;
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tool-table button:hover {
+    background-color: #e60000;
+}
+
+.mechanic-panel-container {
+    padding: 20px;
+}
+
+.table-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.table-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.tool-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tool-table th,
+.tool-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.tool-table th {
+    background-color: #f2f2f2;
+}
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn.red {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn.green {
+    background-color: #2ecc71;
+    color: white;
+}
